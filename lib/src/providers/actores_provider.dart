@@ -6,7 +6,6 @@ import 'dart:convert';
 import 'dart:async';
 
 import 'package:scooby_app/src/models/actores_model.dart';
-import 'package:scooby_app/src/models/pelicula_model.dart';
 
 class ActoresProvider {
   String _apikey = 'ad7d26135dc62bf6546c1946542ba99d';
@@ -54,7 +53,7 @@ class ActoresProvider {
       'api_key': _apikey,
       'language': _language,
       'page': _popularesPage.toString()
-    }); // Pelicula
+    });
     final resp = await _procesarRespuesta(url);
 
     _populares.addAll(resp);
@@ -77,7 +76,7 @@ class ActoresProvider {
   }
 
   Future<List<Actor>> buscarActor(String query) async {
-    final url = Uri.https(_url, '3/people/search', {
+    final url = Uri.https(_url, '3/search/person', {
       'api_key': _apikey,
       'language': _language,
       'query': query

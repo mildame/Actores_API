@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:scooby_app/src/models/pelicula_model.dart';
 import 'package:scooby_app/src/models/actores_model.dart';
 
 class CardSwiper extends StatelessWidget {
